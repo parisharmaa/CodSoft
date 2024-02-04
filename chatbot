@@ -1,0 +1,73 @@
+from tkinter import *
+from nltk.chat.util import Chat, reflections
+root = Tk()
+root.title("Chatbot")
+def send():
+    send = "You -> "+e.get()
+    txt.insert(END, "n"+send)
+    user = e.get().lower()
+    if(user == "hello"):
+        txt.insert(END, "\nn" + "Bot -> Hi")
+
+    elif(user == "hi" or user == "hii" or user == "hiiii"):
+        txt.insert(END, "\nn" + "Bot -> Hello\n")
+
+    elif(e.get() == "how are you?"):
+        txt.insert(END, "\nn" + "Bot -> fine! and you\n")
+
+    elif(user == "fine" or user == "i am good" or user == "i am doing good"):
+        txt.insert(END, "\nn" + "Bot -> Great! how can I help you.\n")
+
+    elif(e.get() == "what is your name?"):
+        txt.insert(END, "\nn" + "Bot -> I am a bot created by Pari Sharma. you can call me your friend!\n")
+
+    elif(e.get() == "sorry"):
+        txt.insert(END, "\nn" + "Bot -> Its alright,Its OK, never mind\n")
+
+    elif(e.get() == "your age"):
+        txt.insert(END, "\nn" + "Bot -> I'm a computer program dude.Seriously you are asking me this?\n")
+
+    elif(e.get() == "what you want?"):
+        txt.insert(END, "\nn" + "Bot -> Make me an offer I can't refuse\n")
+
+    elif(e.get() == "your creator?"):
+        txt.insert(END, "\nn" + "Bot -> Pari created me using Python's NLTK library ,top secret \n")
+
+    elif(user == "your location?" or user == "where do you live" or user == "where are you from ?"):
+        txt.insert(END, "\nn" + "Bot -> I am a from Muzaffarnagar(Uttar Pradesh)\n")
+
+    elif(e.get() == "how's your health?"):
+        txt.insert(END, "\nn" + "Bot -> I'm a computer program, so I'm always healthy\n ")
+
+    elif(e.get() == "your favourite sports"):
+        txt.insert(END, "\nn" + "Bot -> I am a fan of cricket \n")
+
+    elif(e.get() == "your favourite sportsperson"):
+        txt.insert(END, "\nn" + "Bot -> my fav sportsperson is Sachin Tendulkar \n")
+
+    elif(e.get() == "your favourite actor"):
+        txt.insert(END, "\nn" + "Bot -> my fav actor is Amitabh Bacchan\n ")
+
+    elif(e.get() == "any suggestion for learning data science"):
+        txt.insert(END, "\nn" + "Bot -> there are many online websites for the same. Crazy_Tech has many great articles with each step explanation along with code, you can explore \n")
+
+    elif(e.get() == "quit"):
+        txt.insert(END, "\nn" + "Bot -> BBye take care. See you soon :) ","It was nice talking to you. See you soon :)\n ")
+
+    else:
+        txt.insert(END, "\nn" + "Bot -> Sorry! I dind't got you")
+    e.delete(0, END)
+txt = Text(root)
+txt.grid(row=0, column=0, columnspan=2)
+e = Entry(root, width=100)
+e.grid(row=1, column=0)
+send = Button(root, text="Send", command=send).grid(row=1, column=1)
+
+
+root.mainloop()
+
+
+
+
+
+
